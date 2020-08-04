@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Liste des clients</title>
+</head>
+
+<body>
+
+
+    <main class>
+        <form>
+            <div>
+
+                <h2>Liste des clients</h2>
+
+                <a href="./formAddCustomer.phtml" class="btn btn-primary btn-lg">Ajouter un client</a>
+
+                <table>
+                    <tr>
+                        <th>Nom du client</th>
+                        <th class="tButton" colspan="3"></th>
+                    </tr>
+
+                    <?php foreach ($list as $newCustomer) : ?>
+                        <tr>
+                            <td> <?= $newCustomer['Nom_client ']; ?> </td>
+                            <td class="tButton">
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
